@@ -1,5 +1,3 @@
-require_relative '../environment/environment.rb' 
-
 def create_location_hash
 	html = open('http://theironyard.com/locations/')
 	location_data = Nokogiri::HTML(html)

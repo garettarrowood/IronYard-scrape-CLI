@@ -1,5 +1,3 @@
-require_relative '../environment/environment.rb' 
-
 class CityInfo
 
 	def initialize(city_hash)

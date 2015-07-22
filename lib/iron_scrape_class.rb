@@ -1,5 +1,3 @@
-require_relative '../environment/environment.rb' 
-
 class IronScrape
 
 	def run(hash)
@@ -54,7 +52,7 @@ class IronScrape
 	end
 
 	def goodbye
-		puts "Thanks for using this program! Bye!"
+		puts "Thanks for using the program! Bye!"
 	end
 
 	def city_matcher_array
