@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require_relative '../lib/iron_yard_location_data'
-require_relative '../lib/iron_yard_scraper'
+
+require_relative '../environment/environment.rb' 
 
 iron_yard_location_hash = create_location_hash
 joy = IronScrape.new

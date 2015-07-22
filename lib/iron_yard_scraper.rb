@@ -1,6 +1,4 @@
-# require 'rubygems'
-require 'nokogiri'  
-require 'open-uri'  
+require_relative '../environment/environment.rb' 
 
 def create_location_hash
 	html = open('http://theironyard.com/locations/')
