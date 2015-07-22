@@ -85,7 +85,7 @@ class CityInfo
 		until response == 'exit'
 			case response 
 			when 'offerings'
-				@city_hash[offerings].each do |offering|
+				@city_hash[:offerings].each do |offering|
 					puts offering
 				end
 				space
