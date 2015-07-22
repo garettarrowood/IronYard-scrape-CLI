@@ -27,7 +27,7 @@ def create_location_hash
 			locations[city][:team][people.css('h3').text] = people.css('h4').text
 		end
 		if locations[city][:team] == {}
-			locations[city][:team] = "No team members listed at this time."
+			locations[city][:team] = {"No team members" => "current result"}
 		end
 	end
 	locations.delete("")

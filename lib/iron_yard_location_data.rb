@@ -14,6 +14,7 @@ class IronScrape
 	  	  main_menu
 	  	  response = gets.chomp
 	  	elsif city_matcher_array.include?(response)
+	  		space
 	  		puts "You choose #{response}!"
 	  		space
 	  		city_exploration(response)
@@ -85,17 +86,19 @@ class CityInfo
 		until response == 'exit'
 			case response 
 			when 'offerings'
-				@city_hash[:offerings].each do |offering|
-					puts offering
-				end
 				space
-				puts "What's next?"
+				location_offerings
 				space
 				city_menu
 				response = gets.chomp.downcase
 			when 'team'
-				#todo - action
+				space
+				team_members
+				space
+				city_menu
+				response = gets.chomp.downcase
 			else
+				slace
 				no_match
 				space
 				city_menu
@@ -118,6 +121,18 @@ class CityInfo
 
 	def no_match
 		puts "Sorry! I don't recognize your request. Try again"
+	end
+
+	def team_members
+		@city_hash[:team].each do |name, position|
+			puts "#{name} is the #{position}."
+		end
+	end
+
+	def location_offerings
+		@city_hash[:offerings].each do |offering|
+			puts offering
+		end
 	end
 
 end
